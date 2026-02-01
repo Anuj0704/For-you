@@ -28,7 +28,7 @@ h1, h2 {
 }
 
 .hero h1 {
-  font-size: 3em;
+  font-size: clamp(2rem, 6vw, 3rem);
 }
 
 .hero button {
@@ -66,14 +66,14 @@ h1, h2 {
 
 .final h1 {
   margin-top: 20px;
-  font-size: 2.5em;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
   color: #d63384;
 }
 
 .reply textarea {
-  width: 80%;
+  width: 100%;
   max-width: 400px;
-  height: 100px;
+  height: 120px;
   border-radius: 10px;
   padding: 10px;
   border: none;
@@ -124,3 +124,23 @@ h1, h2 {
   opacity: 1;
   pointer-events: auto;
 }
+
+input, textarea {
+  font-size: 16px;
+}
+
+p {
+  font-size: clamp(1rem, 3.5vw, 1.1rem);
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.story, .final, .reply {
+  max-width: 900px;
+  margin: auto;
+}
+
+

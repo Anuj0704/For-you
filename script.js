@@ -129,6 +129,12 @@ function typeParagraph() {
     if (charIndex < texts[pIndex].length) {
       typeElements[pIndex].innerHTML += texts[pIndex].charAt(charIndex);
       charIndex++;
+
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+      
       setTimeout(typeParagraph, 70);
     } else {
       charIndex = 0;
@@ -146,7 +152,12 @@ function typeFinal() {
     if (finalChar < finalTexts[finalIndex].length) {
       finalElements[finalIndex].innerHTML += finalTexts[finalIndex].charAt(finalChar);
       finalChar++;
-      setTimeout(typeFinal, 40);
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+      
+      setTimeout(typeFinal, 70);
     } else {
       finalChar = 0;
       finalIndex++;
@@ -186,5 +197,6 @@ const finalTexts = [
 
 let finalIndex = 0;
 let finalChar = 0;
+
 
 

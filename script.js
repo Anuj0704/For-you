@@ -135,6 +135,7 @@ function autoScrollIfNeeded(element) {
   }
 }
 
+
 function typeParagraph() {
   if (pIndex < texts.length) {
     if (charIndex < texts[pIndex].length) {
@@ -142,7 +143,7 @@ function typeParagraph() {
       charIndex++;
 
       autoScrollIfNeeded(typeElements[pIndex]);
-      
+
       setTimeout(typeParagraph, 70);
     } else {
       charIndex = 0;
@@ -162,7 +163,7 @@ function typeFinal() {
       finalChar++;
 
       autoScrollIfNeeded(finalElements[finalIndex]);
-      
+
       setTimeout(typeFinal, 70);
     } else {
       finalChar = 0;

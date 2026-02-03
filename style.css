@@ -12,7 +12,7 @@ body {
 }
 
 section, footer {
-  padding: 80px 20px;
+  padding: clamp(50px, 8vw, 80px) 20px;
 }
 
 h1, h2 {
@@ -142,5 +142,154 @@ p {
   max-width: 900px;
   margin: auto;
 }
+
+/* .start-btn {
+  margin-top: 30px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff8fb3, #ff5da2);
+  color: rgb(21, 20, 20);
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+  animation: pulse 2s infinite;
+} */
+
+.start-btn {
+  margin-top: 30px;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 40px;
+  background: hotpink;
+  color: rgb(24, 22, 22);
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  animation: pulseFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 10px rgba(255,105,180,0.4);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255,105,180,0.7);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 10px rgba(255,105,180,0.4);
+  }
+}
+/* Ripple */
+.start-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+/* Floating heart */
+.float-heart {
+  position: absolute;
+  font-size: 18px;
+  animation: floatUp 1.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Pulse (you already had this idea) */
+/* @keyframes pulse {
+  0% { box-shadow: 0 0 15px rgba(255,105,180,0.5); }
+  50% { box-shadow: 0 0 30px rgba(255,20,147,0.9); }
+  100% { box-shadow: 0 0 15px rgba(255,105,180,0.5); }
+} */
+
+
+.start-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.start-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.float-heart {
+  position: absolute;
+  font-size: 18px;
+  animation: floatUp 1.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+
+/* shimmer text */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #ff5fa2,
+    #ffffff,
+    #ff5fa2
+  );
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 2.5s infinite;
+  font-weight: bold;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+
 
 

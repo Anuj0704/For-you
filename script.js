@@ -124,16 +124,24 @@ function createFloatingHeart(e) {
   setTimeout(() => heart.remove(), 1500);
 }
 
+function autoScrollIfNeeded(element) {
+  const rect = element.getBoundingClientRect();
+
+  if (rect.bottom > window.innerHeight - 20) {
+    window.scrollBy({
+      top: rect.bottom - window.innerHeight + 40,
+      behavior: "smooth"
+    });
+  }
+}
+
 function typeParagraph() {
   if (pIndex < texts.length) {
     if (charIndex < texts[pIndex].length) {
       typeElements[pIndex].innerHTML += texts[pIndex].charAt(charIndex);
       charIndex++;
 
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-      });
+      autoScrollIfNeeded(typeElements[pIndex]);
       
       setTimeout(typeParagraph, 70);
     } else {
@@ -152,10 +160,8 @@ function typeFinal() {
     if (finalChar < finalTexts[finalIndex].length) {
       finalElements[finalIndex].innerHTML += finalTexts[finalIndex].charAt(finalChar);
       finalChar++;
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-      });
+
+      autoScrollIfNeeded(finalElements[finalIndex]);
       
       setTimeout(typeFinal, 70);
     } else {
@@ -197,6 +203,7 @@ const finalTexts = [
 
 let finalIndex = 0;
 let finalChar = 0;
+
 
 
 

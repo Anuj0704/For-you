@@ -129,7 +129,7 @@ function typeParagraph() {
     if (charIndex < texts[pIndex].length) {
       typeElements[pIndex].innerHTML += texts[pIndex].charAt(charIndex);
       charIndex++;
-      setTimeout(typeParagraph, 35);
+      setTimeout(typeParagraph, 70);
     } else {
       charIndex = 0;
       pIndex++;
@@ -186,4 +186,5 @@ const finalTexts = [
 
 let finalIndex = 0;
 let finalChar = 0;
+
 

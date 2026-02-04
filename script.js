@@ -20,7 +20,7 @@ function startExperience(e) {
   typingStarted = true;
   setTimeout(() => {
     typeParagraph();
-  }, 4000); 
+  }, 6000); 
 }
 
 }
@@ -169,6 +169,7 @@ function typeFinal() {
     }
   }
 }
+
 
 
 

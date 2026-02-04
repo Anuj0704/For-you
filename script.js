@@ -167,8 +167,13 @@ function typeFinal() {
       finalIndex++;
       setTimeout(typeFinal, 600);
     }
+  }else {
+    const footer = document.querySelector(".reply");
+    footer.classList.add("show-footer");
+    footer.scrollIntoView({ behavior: "smooth" });
   }
 }
+
 
 
 

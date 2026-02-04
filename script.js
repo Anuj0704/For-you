@@ -109,6 +109,7 @@ function createFloatingHeart(e) {
 const typeElements = document.querySelectorAll(".type");
 
 const texts = [
+  `Something I want to tell you…`;
 `The more I come to know you, the more I realize how truly rare you are.
 You are the most beautiful woman I have ever seen, yet what makes you exceptional to me reaches far beyond appearance. I cherish the way you think, the way you seek to understand people and things rather than judge them and how you instinctively look for the good in things first.`,
 
@@ -165,5 +166,6 @@ function typeFinal() {
     }
   }
 }
+
 
 

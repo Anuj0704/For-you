@@ -11,7 +11,7 @@ function startExperience(e) {
   createFloatingHeart(e);
   document.querySelector(".story").scrollIntoView({ behavior: "smooth" });
 
-   if (!petalInterval && !heartInterval) {
+  if (!petalInterval && !heartInterval) {
     petalInterval = setInterval(createPetal, 1000);
     heartInterval = setInterval(createHeart, 1200);
   }
@@ -22,18 +22,12 @@ function startExperience(e) {
   }
 }
 
-
-
-if(name){
+if (name) {
   document.getElementById("herName").innerText = "Hey " + name + " 🌸";
 }
 
-function scrollToSection() {
-  document.querySelector(".story").scrollIntoView({ behavior: "smooth" });
-}
-
 function sendToWhatsApp() {
-  let msg = document.getElementById("msg").value;
+  let msg = messageInput.value;
   let phone = "918700299851"; 
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
@@ -55,7 +49,6 @@ function createPetal() {
   petal.style.animationDuration = 10 + Math.random() * 5 + "s";
   petal.style.fontSize = 12 + Math.random() * 15 + "px";
   petalContainer.appendChild(petal);
-
   setTimeout(() => petal.remove(), 10000);
 }
 
@@ -66,20 +59,12 @@ function createHeart() {
   heart.style.animationDuration = 10 + Math.random() * 4 + "s";
   heart.style.fontSize = 15 + Math.random() * 20 + "px";
   heartContainer.appendChild(heart);
-
   setTimeout(() => heart.remove(), 10000);
 }
 
 messageInput.addEventListener("input", function () {
-    if (messageInput.value.trim() !== "") {
-      replyBtn.classList.add("show");   
-    } else {
-      replyBtn.classList.remove("show");    
-    }
+  replyBtn.classList.toggle("show", messageInput.value.trim() !== "");
 });
-
-
-
 
 window.addEventListener("scroll", () => {
   reveals.forEach(el => {
@@ -90,7 +75,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
 
 function createRipple(e) {
   const button = e.currentTarget;
@@ -105,10 +89,8 @@ function createRipple(e) {
 
   const ripple = button.getElementsByClassName("ripple")[0];
   if (ripple) ripple.remove();
-
   button.appendChild(circle);
 }
-
 
 function createFloatingHeart(e) {
   const heart = document.createElement("span");
@@ -120,51 +102,10 @@ function createFloatingHeart(e) {
   heart.style.top = e.clientY - rect.top + "px";
 
   e.currentTarget.appendChild(heart);
-
   setTimeout(() => heart.remove(), 1500);
 }
 
-
-
-
-function typeParagraph() {
-  if (pIndex < texts.length) {
-    if (charIndex < texts[pIndex].length) {
-      typeElements[pIndex].innerHTML += texts[pIndex].charAt(charIndex);
-      charIndex++;
-
-
-      setTimeout(typeParagraph, 70);
-    } else {
-      charIndex = 0;
-      pIndex++;
-      setTimeout(typeParagraph, 500);
-    }
-  } else {
-    
-    typeFinal();
-  }
-}
-
-function typeFinal() {
-  if (finalIndex < finalTexts.length) {
-    if (finalChar < finalTexts[finalIndex].length) {
-      finalElements[finalIndex].innerHTML += finalTexts[finalIndex].charAt(finalChar);
-      finalChar++;
-
-      
-
-      setTimeout(typeFinal, 70);
-    } else {
-      finalChar = 0;
-      finalIndex++;
-      setTimeout(typeFinal, 600);
-    }
-  }
-}
-
-
-
+// TYPEWRITER
 const typeElements = document.querySelectorAll(".type");
 
 const texts = [
@@ -186,16 +127,39 @@ const finalElements = document.querySelectorAll(".final-type");
 
 const finalTexts = [
 `You are someone I want in my tomorrow…`,
-
 `I want to listen to you when I wake up, after a hard day, and after a beautiful one(everyday would be beautiful with you). I want you to be part of all my days, and I want to be part of your daily life. And honestly, if the world was ending I'd wanna be next to you`,
-
 `Would you like to walk this path with me?`
 ];
 
 let finalIndex = 0;
 let finalChar = 0;
 
+function typeParagraph() {
+  if (pIndex < texts.length) {
+    if (charIndex < texts[pIndex].length) {
+      typeElements[pIndex].innerHTML += texts[pIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeParagraph, 70);
+    } else {
+      charIndex = 0;
+      pIndex++;
+      setTimeout(typeParagraph, 500);
+    }
+  } else {
+    typeFinal();
+  }
+}
 
-
-
-
+function typeFinal() {
+  if (finalIndex < finalTexts.length) {
+    if (finalChar < finalTexts[finalIndex].length) {
+      finalElements[finalIndex].innerHTML += finalTexts[finalIndex].charAt(finalChar);
+      finalChar++;
+      setTimeout(typeFinal, 70);
+    } else {
+      finalChar = 0;
+      finalIndex++;
+      setTimeout(typeFinal, 600);
+    }
+  }
+}

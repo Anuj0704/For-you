@@ -114,7 +114,7 @@ const typeElements = document.querySelectorAll(".type");
 const texts = [
   `Thoughts I’ve carried for a while…`,
 `The more I come to know you, the more I realize how truly rare you are.
-You are the most beautiful woman I have ever seen, yet what makes you exceptional to me reaches far beyond appearance. I cherish the way you think, the way you seek to understand people and things rather than judge them and how you instinctively look for the good in things first.`,
+You are the most beautiful woman I have ever seen, yet what makes you exceptional to me reaches far beyond appearance. I cherish the way you think, the way you seek to understand things rather than judge them and how you instinctively look for the good in things first.`,
 
 `I adore your calmness, the quiet peace you carry within you and your endless bak bak that makes everything feel lighter. I love listening to you speak about serious matters, random little thoughts or simply about your day, because whenever you talk, I feel deeply connected to you. Without even realizing it, I began wanting to hear you every single day.`,
 
@@ -173,6 +173,7 @@ function typeFinal() {
     footer.scrollIntoView({ behavior: "smooth" });
   }
 }
+
 
 
 

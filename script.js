@@ -17,9 +17,12 @@ function startExperience(e) {
   }
 
   if (!typingStarted) {
-    typingStarted = true;
+  typingStarted = true;
+  setTimeout(() => {
     typeParagraph();
-  }
+  }, 1000); 
+}
+
 }
 
 if (name) {
@@ -166,6 +169,7 @@ function typeFinal() {
     }
   }
 }
+
 
 
 

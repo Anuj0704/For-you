@@ -145,7 +145,7 @@ function typeParagraph() {
     if (charIndex < texts[pIndex].length) {
       typeElements[pIndex].innerHTML += texts[pIndex].charAt(charIndex);
       charIndex++;
-      setTimeout(typeParagraph, 90);
+      setTimeout(typeParagraph, 120);
     } else {
       charIndex = 0;
       pIndex++;
@@ -161,7 +161,7 @@ function typeFinal() {
     if (finalChar < finalTexts[finalIndex].length) {
       finalElements[finalIndex].innerHTML += finalTexts[finalIndex].charAt(finalChar);
       finalChar++;
-      setTimeout(typeFinal, 90);
+      setTimeout(typeFinal, 120);
     } else {
       finalChar = 0;
       finalIndex++;
@@ -169,6 +169,7 @@ function typeFinal() {
     }
   }
 }
+
 
 
 

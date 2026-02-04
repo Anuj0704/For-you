@@ -112,11 +112,11 @@ const texts = [
 `The more I come to know you, the more I realize how truly rare you are.
 You are the most beautiful woman I have ever seen, yet what makes you exceptional to me reaches far beyond appearance. I cherish the way you think, the way you seek to understand people and things rather than judge them and how you instinctively look for the good in things first.`,
 
-`I adore your calmness, the quiet peace you carry within you and even your endless bak bak that makes everything feel lighter. I love listening to you speak about serious matters, random little thoughts or simply about your day, because whenever you talk, I feel deeply connected to you. Without even realizing it, I began wanting to hear you every single day.`,
+`I adore your calmness, the quiet peace you carry within you and your endless bak bak that makes everything feel lighter. I love listening to you speak about serious matters, random little thoughts or simply about your day, because whenever you talk, I feel deeply connected to you. Without even realizing it, I began wanting to hear you every single day.`,
 
 `You matter to me in ways I could never confine to a single sentence. You inspire me to be gentler, wiser and more understanding. I don’t like you for just one reason. There is so much about you that I can’t even put into words. But what I fall for the most is your thoughts, your heart and your presence.`,
 
-`When I imagine the future, I do not picture perfection 👉🏻👈🏻 I picture you. I think of us growing together, exchanging thoughts, listening you and creating something truly meaningful. To me, you are not just beautiful to look at(beauty of your face is beyond my wildest dream 🤌🏻), you are beautiful in your thoughts, in your kindness, and in the way you are.`
+`When I imagine the future, I do not picture perfection 👉🏻👈🏻 I picture you. I think of us growing together, exchanging thoughts, listening you and creating something truly meaningful. To me, you are not just beautiful to look at(beauty of your face is beyond my wildest dream 🤌🏻), you are beautiful in your thoughts, in your kindness and in the way you are.`
 ];
 
 let pIndex = 0;
@@ -130,7 +130,7 @@ const finalTexts = [
 
 `I want to listen to you when I wake up, after a hard day and after a beautiful one(everyday would be beautiful with you). I want you to be part of all my days and I want to be part of your daily life. And honestly, if the world was ending I'd wanna be next to you`,
 
-`Would you like to walk this path with me?`
+`So… can I keep you?`
 ];
 
 let finalIndex = 0;
@@ -165,4 +165,5 @@ function typeFinal() {
     }
   }
 }
+
 

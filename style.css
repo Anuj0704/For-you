@@ -294,6 +294,19 @@ p {
   transition: opacity 0.5s ease;
 }
 
+.reply {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+  pointer-events: none;
+}
+
+.reply.show-footer {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 
 
 
